@@ -1,0 +1,37 @@
+﻿<Window x:Class="desktop_gui_galeria_obrazow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:desktop_gui_galeria_obrazow"
+        mc:Ignorable="d"
+        Title="Galeria Obrazów" Height="500" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel Grid.Column="0" Background="#F5F5F5" Margin="5">
+            <Button x:Name="ButtonWybierzFolder" Content="Wybierz folder ze zdjęciami" DockPanel.Dock="Top" FontSize="14" Padding="10" Margin="0,0,0,5" Click="ButtonWybierzFolder_Click"/>
+
+            <ListBox x:Name="ListBoxMiniaturki" SelectionChanged="ListBoxMiniaturki_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Image Source="{Binding Sciezka}" Width="60" Height="60" Stretch="UniformToFill"/>
+                            <TextBlock Text="{Binding NazwaPliku}" VerticalAlignment="Center" Margin="10,0,0,0" FontSize="12" TextWrapping="Wrap" MaxWidth="140"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </DockPanel>
+
+        <Border Grid.Column="1" Background="#E0E0E0" Margin="5" BorderBrush="#CCCCCC" BorderThickness="1">
+            <Grid>
+                <Image x:Name="ImageDuzyPodglad" Stretch="Uniform" Margin="10"/>
+                <TextBlock x:Name="TextBlockInformacja" Text="Wybierz folder i kliknij zdjęcie, aby zobaczyć podgląd" FontSize="16" Foreground="#666666" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Visible"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+﻿<Window x:Class="desktop_gui_Konwerter_jednostek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:desktop_gui_Konwerter_jednostek"
+        mc:Ignorable="d"
+        Title="Konwerter Jednostek" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <Label Content="Wybierz typ konwersji:" FontSize="14" FontWeight="Bold"/>
+            <ComboBox x:Name="ComboBoxTryb" FontSize="16" Padding="5" SelectionChanged="ComboBoxTryb_SelectionChanged">
+                <ComboBoxItem Content="Kilometry na Mile" IsSelected="True"/>
+                <ComboBoxItem Content="Kilogramy na Funty (lb)"/>
+                <ComboBoxItem Content="Celsjusz (°C) na Fahrenheit (°F)"/>
+            </ComboBox>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Margin="0,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <Label x:Name="LabelWejscie" Content="Wartość (km):" FontSize="12"/>
+                <TextBox x:Name="TextBoxWejscie" FontSize="18" Padding="5" TextChanged="TextBoxWejscie_TextChanged"/>
+            </StackPanel>
+
+            <TextBlock Grid.Column="1" Text="=" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,5"/>
+
+            <StackPanel Grid.Column="2">
+                <Label x:Name="LabelWyjscie" Content="Wynik (mile):" FontSize="12"/>
+                <TextBox x:Name="TextBoxWyjscie" FontSize="18" Padding="5" IsReadOnly="True" Background="#F0F0F0"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

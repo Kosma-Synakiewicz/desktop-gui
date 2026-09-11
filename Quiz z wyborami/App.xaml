@@ -1,0 +1,9 @@
+﻿<Application x:Class="desktop_gui_Quiz_z_wyborami.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:desktop_gui_Quiz_z_wyborami"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

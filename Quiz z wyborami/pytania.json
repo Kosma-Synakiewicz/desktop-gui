@@ -1,0 +1,17 @@
+[
+  {
+    "Tresc": "Który jêzyk jest domyœlnym jêzykiem dla WPF?",
+    "Opcje": ["C++", "Java", "C#", "Python"],
+    "PoprawnyIndeks": 2
+  },
+  {
+    "Tresc": "Który kontener WPF uk³ada elementy jeden pod drugim lub obok siebie?",
+    "Opcje": ["Grid", "StackPanel", "Canvas", "WrapPanel"],
+    "PoprawnyIndeks": 1
+  },
+  {
+    "Tresc": "Co oznacza skrót XAML?",
+    "Opcje": ["Extensible Application Markup Language", "Extra Advanced Markup Language", "Example Application Model Language", "Extended Anchor Model Language"],
+    "PoprawnyIndeks": 0
+  }
+]
